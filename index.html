@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </nav>
-                <div class="fullscreenwrapper">
+                <div class="fswrapper">
                     <h1>Hola. Soy Guido <br>Hago diseño industrial</h1>
                     <h3><a href="#">Contactame</a> si tenés una idea o un proyecto a desarrollar y pensás <br>que juntos podemos hacer algo genial</h3>
                 </div>
@@ -63,45 +63,54 @@
         </header>
 
         <section class="portfolio">
-            <div class="filtro" id="filters">
-                <ul>
-                    <li><a href="#" data-filter="*" class="button is-checked">TODOS</a></li>
-                    <li><a href="#" data-filter=".disind" class="button">DISEÑO INDUSTRIAL</a></li>
-                    <li><a href="#" data-filter=".disweb" class="button">DISEÑO WEB</a></li>
-                    <li><a href="#" data-filter=".imp3d" class="button">IMPRESIÓN 3D</a></li>
-                    <li><a href="#" data-filter=".vis3d" class="button">VISUALIZACIÓN 3D</a></li>
-                    <li><a href="#" data-filter=".otros" class="button">OTROS</a></li>
-                </ul>
+            <div class="">
+                <div class="filtro" id="filters">
+                    <ul>
+                        <li><a href="#" data-filter="*" class="filbutton is-checked">TODOS</a></li>
+                        <li><a href="#" data-filter=".disind" class="filbutton">DISEÑO INDUSTRIAL</a></li>
+                        <li><a href="#" data-filter=".disweb" class="filbutton">DISEÑO WEB</a></li>
+                        <li><a href="#" data-filter=".imp3d" class="filbutton">IMPRESIÓN 3D</a></li>
+                        <li><a href="#" data-filter=".vis3d" class="filbutton">VISUALIZACIÓN 3D</a></li>
+                        <li><a href="#" data-filter=".otros" class="filbutton">OTROS</a></li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item disind">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+                    </div>
+                    <div class="grid-item disweb">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+                    </div>
+                    <div class="grid-item imp3d">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+                    </div>
+                    <div class="grid-item imp3d disind">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+                    </div>
+                    <div class="grid-item otros disweb">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+                    </div>
+                    <div class="grid-item vis3d">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+                    </div>
+                    <div class="grid-item vis3d disind imp3d">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+                    </div>
+                    <div class="grid-item otros">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+                    </div>
+                    <div class="grid-item disweb">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+                    </div>
+                </div>
             </div>
-            <div class="grid">
-                <div class="grid-sizer"></div>
-                <div class="grid-item disind">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
-                </div>
-                <div class="grid-item disweb">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
-                </div>
-                <div class="grid-item imp3d">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
-                </div>
-                <div class="grid-item imp3d disind">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-                </div>
-                <div class="grid-item otros disweb">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-                </div>
-                <div class="grid-item vis3d">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-                </div>
-                <div class="grid-item vis3d disind imp3d">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-                </div>
-                <div class="grid-item otros">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-                </div>
-                <div class="grid-item disweb">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
-                </div>
+        </section>
+        <section class="cta">
+            <div class="fswrapper">
+                <h2><span>Consultas, preguntas, inquietudes </span></h2>
+                <p>Si pensás que podemos trabajar juntos o tenés una idea a desarrollar, escribime</p>
+                <a class="button" href="#contact">ESCRIBIME</a>
             </div>
         </section>
 
@@ -140,7 +149,7 @@
         <script>
             var filterFns = {};
             // bind filter button click
-            $('#filters').on( 'click', '.button', function() {
+            $('#filters').on( 'click', '.filbutton', function() {
               var filterValue = $( this ).attr('data-filter');
               // use filterFn if matches value
               filterValue = filterFns[ filterValue ] || filterValue;
@@ -149,7 +158,7 @@
             // change is-checked class on buttons
             $('.filtro').each( function( i, buttonGroup ) {
               var $buttonGroup = $( buttonGroup );
-              $buttonGroup.on( 'click', '.button', function() {
+              $buttonGroup.on( 'click', '.filbutton', function() {
                 $buttonGroup.find('.is-checked').removeClass('is-checked');
                 $( this ).addClass('is-checked');
               });
