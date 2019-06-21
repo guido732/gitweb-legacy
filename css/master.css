@@ -87,17 +87,16 @@ h2 span:after {
 .button {
     color: #fff;
     background-color: #333131;
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 0.75rem;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    margin-top: 2rem;
+    margin-top: 1rem;
+
 }
 .button:hover {
     color: #fff;
     background-color: #e53247;
-    padding: 1rem;
-    font-size: 0.75rem;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
@@ -110,7 +109,7 @@ h2 span:after {
 }
 section {
     margin-top: 1rem;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
 }
 
 .portfolio{
@@ -120,7 +119,7 @@ section {
 section:last-of-type {
     margin-bottom: 0px;
 }
-header h1 {
+header h1, .about-wrapper {
     margin-top: 4rem;
 }
 header h3 a {
@@ -225,9 +224,13 @@ footer p, footer a {
     font-size: 1em;
     margin-bottom: 2rem;
 }
-.contact-subgroup:last-of-type {
+
+.contact-subgroup p, .servicio p {
+    margin-top: 1rem;
+    padding: 0;
     margin-bottom: 0;
 }
+
 
 .contact-group{
     display: flex;
@@ -237,26 +240,164 @@ footer p, footer a {
     margin-bottom: 0;
 }
 
-.contact-wrapper{
+.contact-wrapper, .about-wrapper{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2rem;
 }
-.contact-img{
-    /* width: 50%; */
-}
-.contact-form {
-    /* width: 50%; */
+
+.contact-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 1rem;
-}
-.contact-img img {
     width: 100%;
+    align-items: center;
+}
+.about-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-start;
 }
 
-@media only screen and (min-width: 576px) and (max-width: 1999px) {
+.about-header h1 {
+    margin-top: 0rem;
+    margin-bottom: -3rem;
+    font-size: 6rem;
+    color: #E53247;
+}
+
+.contact-img img,
+.about-img img {
+    width: 100%;
+}
+.contact-img,
+.about-img {
+    margin: auto;
+    margin-top: 0
+}
+
+.form-wrapper {
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    border-style: none;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"]{
+    background-color: #FFFFFF;
+    border: 1px solid #cfecf5;
+    border-radius: 0;
+    width: 100%;
+    padding: 7px;
+    font-size: 0.8rem;
+}
+
+.form-row input[type="text"]:invalid,
+.form-row input[type="email"]:invalid{
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none;
+}
+
+.form-row select{
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+    -webkit-appearence: none;
+}
+
+.form-row textarea {
+    font-size: 1rem;
+    border: 1px solid #cfecf5;
+    min-height: 200px;
+    width: 100%;
+    padding: 7px;
+    resize: none;
+}
+
+.form-row button {
+    background-color: #e53247;
+    border: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.form-row button:hover{
+    background-color: #9e2638;
+}
+
+.form-row button:active{
+    background-color: #9e2638;
+}
+.dark {
+    background-color: #333131;
+}
+
+.light-text {
+    color: #fff;
+}
+
+.servicios-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.servicio {
+    margin-bottom: 2rem;
+}
+
+.servicios {
+    background-color: #f1f1f1;
+}
+
+.proceso-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.paso {
+    min-width: 250px;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.inline p, .inline h4 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.inline {
+    margin-bottom: -1rem;
+}
+
+.paso p:first-child {
+    font-weight: 400;
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #989898;
+}
+
+.paso span:after {
+    content:"";
+    display: inline-block;
+    height: 0.25em;
+    vertical-align: top;
+    width: 10%;
+    border-top: 3px solid #E53247;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1199px) {
     .grid-sizer,
     .grid-item {
       width: 50%;
@@ -285,18 +426,47 @@ footer p, footer a {
         margin-right: 0;
     }
 
-    .contact-img{
+    .contact-img,
+    .about-img{
         width: 50%;
     }
-    .contact-form {
+    .contact-form{
         width: 50%;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
-        padding-left: 1rem;
+        justify-content: center;
     }
-    .contact-img img {
+    .about-header{
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
+    }
+    .contact-img img,
+    .about-img img {
         width: 100%;
+    }
+    .form-wrapper {
+        width: 90%;
+    }
+    .about-header h1 {
+        margin-bottom: -3rem;
+        font-size: 6rem;
+    }
+    .servicios-wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .servicio {
+        width: 30%;
+        padding: 0 1rem 0 1rem;
+    }
+    .paso {
+        max-width: 50%;
+        padding: 0 1rem 0 1rem;
+
     }
 }
 
@@ -342,5 +512,56 @@ footer p, footer a {
     }
     .portfolio{
         margin-bottom: 50px;
+    }
+    .contact-group{
+    flex-direction: row;
+    justify-content: center;
+    }
+    .contact-subgroup{
+        margin-right: 2rem;
+    }
+    .contact-subgroup:last-of-type{
+        margin-right: 0;
+    }
+    .contact-img,
+    .about-img{
+        width: 50%;
+    }
+    .contact-form{
+        width: 50%;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .about-header{
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+    .contact-img img,
+    .about-img img {
+        width: 100%;
+    }
+    .form-wrapper {
+        width: 90%;
+        max-width: 750px;
+        margin-left: 2rem;
+    }
+    .about-header h1 {
+        margin-bottom: -4rem;
+        font-size: 8rem;
+    }
+    .servicios-wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .servicio {
+        width: 30%;
+        padding: 0 1rem 0 1rem;
+    }
+    .paso {
+        max-width: 25%;
+        padding: 0 1rem 0 1rem;
     }
 }
