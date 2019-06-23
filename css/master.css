@@ -65,6 +65,9 @@ p strong {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+p em {
+    font-style: italic;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -74,6 +77,14 @@ a:hover {
     text-decoration: none;
     color: inherit;
 }
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
 h2 span:after {
     content:"";
     display: inline-block;
@@ -87,11 +98,11 @@ h2 span:after {
 .button {
     color: #fff;
     background-color: #333131;
+    margin-top: 1rem;
     padding: 1rem 2rem;
     font-size: 0.75rem;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    margin-top: 1rem;
 
 }
 .button:hover {
@@ -120,7 +131,7 @@ section:last-of-type {
     margin-bottom: 0px;
 }
 header h1, .about-wrapper {
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 header h3 a {
     border-bottom: 1px solid;
@@ -143,6 +154,11 @@ header h3 a {
   display: block;
   max-width: 100%;
 }
+
+.grid-item:hover {
+    
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -231,19 +247,17 @@ footer p, footer a {
     margin-bottom: 0;
 }
 
-
 .contact-group{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 0;
 }
 
 .contact-wrapper, .about-wrapper{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
 }
 
 .contact-form{
@@ -343,15 +357,15 @@ footer p, footer a {
     color: #fff;
 }
 
-.servicios-wrapper{
+.servicios-wrapper, .skill-wrapper{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
-.servicio {
+.servicio, .skill {
     margin-bottom: 2rem;
 }
 
@@ -388,7 +402,7 @@ footer p, footer a {
     color: #989898;
 }
 
-.paso span:after {
+.paso > span:after, .exp-info > span:after {
     content:"";
     display: inline-block;
     height: 0.25em;
@@ -396,6 +410,164 @@ footer p, footer a {
     width: 10%;
     border-top: 3px solid #E53247;
 }
+
+/* Style the tab */
+.tab {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    overflow: hidden;
+}
+
+.tablinks {
+    padding: 1rem 0.75rem;
+}
+
+.tab button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    overflow: hidden;
+    background-color: #333131;
+    border: 2px solid #333131;
+    box-sizing:border-box;
+    color: #fff;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+ background-color: #595757;
+}
+
+.tab button.active {
+    color: #333131;
+    background-color: #fff;
+    border: 2px solid #333131;
+    box-sizing:border-box;
+}
+
+.tabcontent {
+    animation: fadeEffect .5s;
+    position: relative;
+}
+
+.tab-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1rem;
+}
+.tablinks {
+    padding: 0.75rem 1rem;
+}
+
+.exp-info h1 {
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    left: -0.25rem;
+    top: 0;
+    font-size: 6rem;
+    color: #E53247;
+}
+
+.vl {
+  border-left: 1px solid #c1c1c1;
+  height: 87%;
+  top: 2rem;
+  position: absolute;
+  left: 1rem;
+  z-index: -1;
+}
+
+.exp-info, .exp-fecha {
+    padding-left: 3rem;
+}
+
+.experiencia {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.experiencia p, .experiencia h4 {
+    margin-bottom: 0.2rem;
+}
+
+.exp-info p:last-of-type{
+    margin-top: -1rem;
+}
+
+.subtitle > p {
+   width: 13rem;
+   text-align: center;
+   border-bottom: 1px solid #989898;
+   line-height: 0.5em;
+   margin: 1rem auto 0 auto ;
+   color: #989898;
+}
+
+.subtitle > p span {
+    background:#fff;
+    padding:0 10px;
+}
+
+.skill h4 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.skill p {
+    margin-top: 0;
+}
+
+.skill {
+    background-color: #f1f1f1;
+    width: 210px;
+    margin: 0.5rem;
+    padding: 2rem;
+}
+
+.textskill {
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: #f1f1f1;
+    width: 210px;
+    margin: 0.5rem;
+}
+
+.grayfilter{
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.grayfilter:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  transition: 0.3s;
+}
+
+.skill-wrapper img, .servicios-wrapper img {
+    max-width: 65px;
+}
+.download h2 {
+    margin-bottom: 1rem;
+}
+
+.proceso, .about, .cv, .welcome, .portfolio {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.servicios {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 
 @media only screen and (min-width: 576px) and (max-width: 1199px) {
     .grid-sizer,
@@ -413,7 +585,7 @@ footer p, footer a {
         margin-bottom: 0;
     }
     header h1 {
-        margin-top: 6rem;
+        margin-top: 8rem;
     }
     .contact-group{
         flex-direction: row;
@@ -454,10 +626,9 @@ footer p, footer a {
         margin-bottom: -3rem;
         font-size: 6rem;
     }
-    .servicios-wrapper{
+    .servicios-wrapper, .skill-wrapper{
         flex-direction: row;
         justify-content: space-between;
-
     }
     .servicio {
         width: 30%;
@@ -465,8 +636,41 @@ footer p, footer a {
     }
     .paso {
         max-width: 50%;
-        padding: 0 1rem 0 1rem;
+        padding: 0 2rem 0 0;
+    }
+    .tab {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .vl {
+        height: 80%;
+    }
+    .subtitle > p {
+       width: 20rem;
+    }
+    .skill-wrapper {
+        justify-content: center;
+    }
+    .download {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+    .download .button{
+        width: auto;
+        margin: auto;
+    }
+    .proceso, .about, .cv, .welcome, .portfolio {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
 
+    .servicios {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -552,16 +756,83 @@ footer p, footer a {
         margin-bottom: -4rem;
         font-size: 8rem;
     }
-    .servicios-wrapper{
+    .servicios-wrapper, .skill-wrapper{
         flex-direction: row;
         justify-content: space-between;
     }
-    .servicio {
+    .servicio{
         width: 30%;
         padding: 0 1rem 0 1rem;
     }
     .paso {
         max-width: 25%;
-        padding: 0 1rem 0 1rem;
+        padding: 0 2rem 0 0;
+    }
+    .tab {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .vl {
+        left: 50%;
+        height: 78%;
+        top: 1.75rem;
+    }
+
+    .exp-info, .exp-fecha {
+        padding-left: 0;
+    }
+
+    .experiencia {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .exp-fecha, .exp-info {
+        width: 50%;
+        padding: 0 2rem;
+        position: relative;
+    }
+
+    .exp-fecha {
+        text-align: right;
+    }
+
+    .exp-info h1 {
+        left: -1.25rem;
+        top: -1.75rem;
+    }
+    .subtitle > p {
+       width: 25rem;
+    }
+    .skill-wrapper {
+        justify-content: center;
+    }
+    .skill:first-of-type, .text-skill:first-of-type{
+        margin-left: 0;
+    }
+    .skill:last-of-type, .text-skill:last-of-type{
+        margin-right: 0;
+    }
+    .download {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+    .download .button{
+        width: auto;
+        margin: auto;
+    }
+    .proceso, .about, .cv, .welcome, .portfolio {
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+    }
+
+    .servicios {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 }
