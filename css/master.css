@@ -33,6 +33,13 @@ html {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
+.navbar-brand img{
+    width: 50px;
+}
+.navbar-brand{
+    padding: 0;
+    margin: 0;
+}
 .fswrapper {
     margin-right: 1rem;
     margin-left: 1rem;
@@ -156,7 +163,7 @@ header h3 a {
 }
 
 .grid-item:hover {
-    
+
 }
 
 ul {
@@ -176,16 +183,19 @@ ul {
     margin-top: .5rem;
     font-family: 'Montserrat', sans-serif;
     font-size: .75rem;
-    font-weight: 400;
-    color: #333131;
+    font-weight: 700;
+    color: #808080;
+    border-bottom: 2px solid white;
+    transition: 0.3s;
 }
 .filtro li:last-of-type{
     margin-right: 0;
 }
-.is-checked{
+.is-checked, .filtro li:hover{
   color: #E53247;
   font-weight: 700;
   border-bottom: 2px solid;
+  transition: 0.3s;
 }
 .is-checked:hover{
   color: #E53247;
