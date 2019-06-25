@@ -63,7 +63,7 @@ h4{
     font-size: 1rem;
     overflow: hidden;
 }
-p {
+p, footer a {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     margin-bottom: 1rem;
@@ -143,6 +143,9 @@ header h1, .about-wrapper {
 header h3 a {
     border-bottom: 1px solid;
 }
+header h3 a:hover {
+    border-bottom: 2px solid;
+}
 /* clear fix */
 .grid:after {
   content: '';
@@ -167,10 +170,6 @@ header h3 a {
 
 
 
-.pofo-link {
-    /* display: inline-block; */
-}
-
 .hovereffect {
   width: 100%;
   height: 100%;
@@ -178,7 +177,6 @@ header h3 a {
   overflow: hidden;
   position: relative;
   text-align: center;
-  /* cursor: default; */
   background: #E53247;
 }
 
@@ -197,7 +195,7 @@ header h3 a {
     flex-wrap: nowrap;
     align-items:baseline;
     justify-content: flex-end;
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 1rem 2rem;
 }
 
 .hovereffect img {
@@ -212,11 +210,10 @@ header h3 a {
   transform: scale(1.1);
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
-
   opacity: 0.15;
   filter: alpha(opacity=15);
   filter: blur(2px);
-  -webkit-filter: blur(2px);
+  -webkit-filter: blur(3px);
 }
 
 .hovereffect h2 {
@@ -225,11 +222,11 @@ header h3 a {
 }
 
 .hovereffect p.text-white, .hovereffect h2 {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   opacity: 0;
   filter: alpha(opacity=0);
   color: #fff;
@@ -274,17 +271,13 @@ ul {
 .filtro li:last-of-type{
     margin-right: 0;
 }
-.is-checked, .filtro li:hover{
+.is-checked, .filtro li:hover, .is-checked:hover{
   color: #E53247;
   font-weight: 700;
   border-bottom: 2px solid;
   transition: 0.3s;
 }
-.is-checked:hover{
-  color: #E53247;
-  font-weight: 700;
-  border-bottom: 2px solid;
-}
+
 footer {
     background-color: #333131;
     color: #cbcbcb;
@@ -329,6 +322,17 @@ footer p, footer a {
     justify-content: space-between;
     align-items: center;
 }
+
+.redes a {
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+.redes a:hover, footer a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
 .contact-subgroup {
     font-size: 1em;
     margin-bottom: 2rem;
