@@ -24,6 +24,8 @@ html {
     margin-bottom: 2rem;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 .navbar-nav .nav-item .nav-link{
     color: #333131;
@@ -32,6 +34,8 @@ html {
     color: #E53247;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 .navbar-brand img{
     width: 50px;
@@ -110,6 +114,8 @@ h2 span:after {
     font-size: 0.75rem;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 
 }
 .button:hover {
@@ -117,6 +123,8 @@ h2 span:after {
     background-color: #e53247;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 .cta {
     background-color: #F1F1F1;
@@ -204,6 +212,8 @@ header h3 a:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   backface-visibility: hidden;
+  -ms-transition-duration: .3s;
+  -moz-transition-duration:.3s;
 }
 
 .hovereffect:hover img {
@@ -227,6 +237,8 @@ header h3 a:hover {
   transform: scale(0.8);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  -ms-transition-duration: .2s;
+  -moz-transition-duration:.2s;
   opacity: 0;
   filter: alpha(opacity=0);
   color: #fff;
@@ -263,10 +275,13 @@ ul {
     margin-top: .5rem;
     font-family: 'Montserrat', sans-serif;
     font-size: .75rem;
+    line-height: 1rem;
     font-weight: 700;
     color: #808080;
-    border-bottom: 2px solid white;
-    transition: 0.3s;
+    /* border-bottom: 2px solid white; */
+    /* transition: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s; */
 }
 .filtro li:last-of-type{
     margin-right: 0;
@@ -274,8 +289,19 @@ ul {
 .is-checked, .filtro li:hover, .is-checked:hover{
   color: #E53247;
   font-weight: 700;
-  border-bottom: 2px solid;
-  transition: 0.3s;
+  /* border-bottom: 2px solid; */
+  line-height: 1rem;
+  /* transition: 0.3s;
+  -ms-transition-duration: .3s;
+  -moz-transition-duration:.3s;
+  -webkit-transform: 0.3s;
+  -ms-transform: 0.3s; */
+}
+
+.is-checked {
+    color: #E53247;
+    font-weight: 700;
+    /* border-bottom: 2px solid; */
 }
 
 footer {
@@ -326,11 +352,15 @@ footer p, footer a {
 .redes a {
     margin-left: 1rem;
     transition: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 
 .redes a:hover, footer a:hover {
     opacity: 0.8;
     transition: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 
 .contact-subgroup {
@@ -437,6 +467,8 @@ footer p, footer a {
     border: none;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 
 .form-row button:hover{
@@ -535,6 +567,8 @@ footer p, footer a {
     outline: none;
     cursor: pointer;
     transition: 0.3s;
+    -ms-transition-duration: .3s;
+    -moz-transition-duration:.3s;
 }
 
 .tab button:hover {
@@ -640,12 +674,16 @@ footer p, footer a {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%);
   transition: 0.3s;
+  -ms-transition-duration: .3s;
+  -moz-transition-duration:.3s;
 }
 
 .grayfilter:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
   transition: 0.3s;
+  -ms-transition-duration: .3s;
+  -moz-transition-duration:.3s;
 }
 
 .skill-wrapper img, .servicios-wrapper img {
