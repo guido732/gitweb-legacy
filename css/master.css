@@ -119,6 +119,7 @@ h2 span:after {
     transition-duration: 0.3s;
     -ms-transition-duration: .3s;
     -moz-transition-duration:.3s;
+    text-transform: uppercase;
 
 }
 .button:hover {
@@ -781,14 +782,19 @@ section .tab button {
     width: 100%;
     margin-bottom: .5rem;
 }
-
-.pofobutton {
-    display: block;
-    width: 115px;
-    margin:auto;
-    text-align: center;
+.buttonwrapper {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    margin-top: 4rem;
 }
 
+.buttonwrapper> a {
+    align-self: center;
+    margin-top: 1rem;
+}
 
 
 
