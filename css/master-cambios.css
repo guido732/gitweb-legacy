@@ -4,9 +4,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+html {
+    font-size: 1rem;
+}
 body {
     /* overflow-y: scroll; */
-    /* font-size: calc(1em + 1vw); */
+    font-size: calc(1em + 1vw);
 }
 .navbar {
     padding: .25rem 0.5rem;
@@ -44,27 +47,36 @@ body {
     padding: 0;
     margin: 0;
 }
+.navbar-toggler-icon {
+    width: 16px;
+    height: 16px;
+}
+.navbar-toggler {
+    padding: 12px 14px;
+    line-height:0;
+    font-size:1em;
+}
 .fswrapper {
     margin-right: 1rem;
     margin-left: 1rem;
 }
 h1, h2, .button, h4, .navbar-nav>li {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.75rem;
+    font-size: 1.5em;
     font-weight: 700;
     color: #333131;
 }
 h2, .navbar-nav>li{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     overflow: hidden;
 }
 h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     color: #E53247;
 }
 h4{
-    font-size: 1rem;
+    /* font-size: 1rem; */
     overflow: hidden;
 }
 p, footer a {
@@ -100,7 +112,7 @@ a.anchor {
 h2 span:after {
     content:"";
     display: inline-block;
-    height: 0.25rem;
+    height: 0.25em;
     vertical-align: bottom;
     width: 100%;
     margin-right: -100%;
@@ -112,7 +124,7 @@ h2 span:after {
     background-color: #333131;
     margin-top: 1rem;
     padding: 1rem 2rem;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -ms-transition-duration: .3s;
@@ -331,7 +343,7 @@ footer p, footer a {
     -moz-transition-duration:.3s;
 }
 .contact-subgroup {
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: 2rem;
 }
 .contact-subgroup p, .servicio p {
@@ -481,7 +493,7 @@ footer p, footer a {
 .paso > span:after, .exp-info > span:after {
     content:"";
     display: inline-block;
-    height: 0.25rem;
+    height: 0.25em;
     vertical-align: top;
     width: 10%;
     border-top: 3px solid #E53247;
@@ -571,7 +583,7 @@ section .tab button {
    width: 13rem;
    text-align: center;
    border-bottom: 1px solid #989898;
-   line-height: 0.5rem;
+   line-height: 0.5em;
    margin: 1rem auto 0 auto ;
    color: #989898;
 }
@@ -640,7 +652,7 @@ section .tab button {
 .listelement em::before{
     display: inline-block;
     content:"";
-    height: 0.25rem;
+    height: 0.25em;
     border-top: 3px solid #E53247;
     vertical-align: baseline;
     width: 20px;
@@ -882,7 +894,6 @@ section .tab button {
     .fullwidth-x2 img, .triple-picture picture img{
         margin-bottom: .25rem;
     }
-
 }
 
 
@@ -913,25 +924,25 @@ section .tab button {
         padding: .25rem 0 .25rem 0;
     }
     h1, h2, .button, h4, .navbar-nav>li {
-        font-size: 3.75rem;
+        /* font-size: 3.75rem; */
     }
     h2, .navbar-nav>li{
-        font-size: 2rem;
+        /* font-size: 2rem; */
     }
     h3 {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
     h4{
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
     p {
         margin-bottom: 1rem;
     }
     .button {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
     .button:hover {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
     .submenu {
         width: 25%;
@@ -990,7 +1001,7 @@ section .tab button {
     }
     .about-header h1, .pofo-header h1 {
         margin-bottom: -4rem;
-        font-size: 8rem;
+        /* font-size: 8rem; */
     }
     .servicios-wrapper, .skill-wrapper{
         flex-direction: row;
@@ -1100,14 +1111,10 @@ section .tab button {
     }
     .fullwidth-x2 picture{
         width: 50%;
-        padding-right: 0.25rem;
-    }
-    .fullwidth-x2 picture:last-of-type{
-        padding-right: 0;
-        padding-left: 0.25rem;
+        padding: 0 .5rem 0 .5rem;
     }
     .fullwidth-x2 {
-        margin: auto;
+        margin: .5rem;
         max-height: 100vh;
     }
     .single-picture, .triple-picture {
