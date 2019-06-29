@@ -101,7 +101,7 @@ h2 span:after {
     content:"";
     display: inline-block;
     height: 0.25rem;
-    vertical-align: bottom;
+    vertical-align: baseline;
     width: 100%;
     margin-right: -100%;
     margin-left: 10px;
@@ -541,21 +541,43 @@ section .tab button {
     margin: 0;
     padding: 0;
     position:absolute;
-    left: 2.5px;
-    top: 10px;
+    left: .15rem;
+    top: 1.9rem;
     font-size: 4rem;
     color: #E53247;
 }
 .vl {
   border-left: 1px solid #c1c1c1;
   height: 87%;
-  top: 32px;
+  top: 3rem;
   position: absolute;
   left: 1rem;
   z-index: -1;
 }
+.exp-info {
+    margin-top: -0.2rem;
+    padding-bottom: 1rem;
+}
+.exp-fecha {
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
 .exp-info, .exp-fecha {
-    padding-left: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color:#f1f1f1;
+    margin-left: 3rem;
+}
+.exp-info svg{
+    position: absolute;
+    fill: #f1f1f1;
+    transform:rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    z-index: -1;
+    max-width: 1.5rem;
+    left: 2.25rem;
+    top: 2.8rem;
 }
 .experiencia {
     position: relative;
@@ -601,16 +623,16 @@ section .tab button {
 .grayfilter{
   filter: grayscale(100%); /* IE6-9 */
   -webkit-filter: grayscale(100%);
-  transition: 0.3s;
-  -ms-transition-duration: .3s;
-  -moz-transition-duration:.3s;
+  transition: 0.2s;
+  -ms-transition-duration: .2s;
+  -moz-transition-duration:.2s;
 }
 .grayfilter:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
-  transition: 0.3s;
-  -ms-transition-duration: .3s;
-  -moz-transition-duration:.3s;
+  transition: 0.2s;
+  -ms-transition-duration: .2s;
+  -moz-transition-duration:.2s;
 }
 .skill-wrapper img, .servicios-wrapper img, .contact-subgroup img {
     max-width: 65px;
@@ -699,6 +721,10 @@ section .tab button {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+.fullwidth-x2{
+    margin-left: 0;
+    margin-right: 0;
 }
 .fullwidth-x2 img, .single-picture img, .half-stacked img, .triple-picture picture img {
     width: 100%;
@@ -798,6 +824,12 @@ section .tab button {
     .vl {
         height: 80%;
     }
+    .exp-info, .exp-fecha {
+        margin-left: 4rem;
+    }
+    .exp-info svg {
+        left:3.25rem;
+    }
     .subtitle > p {
        width: 20rem;
     }
@@ -882,6 +914,9 @@ section .tab button {
     .fullwidth-x2 img, .triple-picture picture img{
         margin-bottom: .25rem;
     }
+    .single-picture img{
+        margin-bottom: 0.25rem;
+    }
 
 }
 
@@ -941,7 +976,9 @@ section .tab button {
         margin-top: 8rem;
     }
     .portfolio{
+        margin: auto;
         margin-bottom: 50px;
+        max-width: 1920px;
     }
     .contact-group{
     flex-direction: row;
@@ -1014,13 +1051,11 @@ section .tab button {
         height: 80%;
         top: 20px;
     }
-    .exp-info, .exp-fecha {
-        padding-left: 0;
-    }
     .experiencia {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        width: 1170px;
     }
     .exp-fecha, .exp-info {
         width: 50%;
@@ -1029,11 +1064,44 @@ section .tab button {
     }
     .exp-fecha {
         text-align: right;
+        background-color: inherit;
+        top: .6rem;
+    }
+    .exp-info {
+        background-color: #f1f1f1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
     .exp-info h1 {
-        left: -13px;
-        top: -17px;
+        left: -3.85rem;
+        top: 0px;
     }
+    .exp-info svg{
+        max-width: 1.5rem;
+        left: -.75rem;
+        top: 1rem;
+    }
+    .izq .exp-info {
+        order:1;
+        text-align: right;
+        margin-left: 0;
+        margin-right: 6rem;
+    }
+    .izq .exp-fecha {
+        order:2;
+        text-align: left;
+        margin-left: 0;
+        padding: 0;
+    }
+    .izq .exp-info svg {
+        right:-.75rem;
+        left: auto;
+    }
+    .izq .exp-info h1 {
+        right: -3.75rem;
+        top: 0px;
+    }
+
     .subtitle > p {
        width: 25rem;
     }
@@ -1100,15 +1168,16 @@ section .tab button {
     }
     .fullwidth-x2 picture{
         width: 50%;
-        padding-right: 0.25rem;
+        padding-right: 0.5rem;
     }
     .fullwidth-x2 picture:last-of-type{
         padding-right: 0;
-        padding-left: 0.25rem;
+        padding-left: 0.5rem;
     }
     .fullwidth-x2 {
         margin: auto;
         max-height: 100vh;
+        margin-bottom: .5rem;
     }
     .single-picture, .triple-picture {
         max-width: 1170px;
@@ -1137,5 +1206,11 @@ section .tab button {
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+    }
+    .single-picture img{
+        margin-bottom: 0;
+    }
+    .triple-picture picture img{
+        margin-bottom: 0;
     }
 }
