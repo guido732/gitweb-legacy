@@ -741,10 +741,19 @@ section .tab button {
     align-self: center;
     margin-top: 1rem;
 }
-
-
-
-
+.video {
+    margin-bottom: 1rem;
+    max-width: 560px;
+    max-height: 560px;
+    width: 100%;
+    height: 560px;
+}
+.video-wrapper {
+    flex-wrap: wrap;
+}
+.video-wide {
+    margin-bottom: 1rem;
+}
 
 
 
