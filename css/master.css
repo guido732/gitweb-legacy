@@ -645,8 +645,8 @@ section .tab button {
     margin-top: 3rem;
 }
 .servicios {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .pofo {
     background-color: #f1f1f1;
@@ -861,8 +861,8 @@ section .tab button {
         margin-top: 3rem;
     }
     .servicios {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
     .pofo-header {
         padding: 4rem 2rem 4rem 2rem;
@@ -1139,8 +1139,8 @@ section .tab button {
         margin-top: 4rem;
     }
     .servicios {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     .pofo-header {
         padding: 4rem 0rem 4rem 2rem;
