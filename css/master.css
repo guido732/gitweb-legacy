@@ -754,7 +754,9 @@ section .tab button {
 .video-wide {
     margin-bottom: 1rem;
 }
-
+.pdansw a {
+    border-bottom: 1px solid;
+}
 
 
 @media only screen and (min-width: 576px) and (max-width: 1199px) {
